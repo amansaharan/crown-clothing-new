@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -38,6 +39,7 @@ function Signup() {
         email,
         password
       );
+
       await createUserDocumentFromAuth(user, { displayName });
       resetFields();
     } catch (error) {
